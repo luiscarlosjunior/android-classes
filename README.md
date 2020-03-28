@@ -4,7 +4,7 @@ Cada projeto realizada na aula está nesse repositório.
 
 Para poder abrir os projetos, primeiro você terá que ter instalado em suas máquina o Android Studio https://developer.android.com/studio
 
-# Inicializando o projeto
+## Inicializando o projeto
 Primeiro faça o download/clone/fork do projeto em sua máquina.
 A inicialização dos projetos pode ser feita de duas maneiras:
   Iniciar Android Studio -> (Na tela de Bem-vindo) Clique na opção de 'Abrir um projeto existente' -> 
