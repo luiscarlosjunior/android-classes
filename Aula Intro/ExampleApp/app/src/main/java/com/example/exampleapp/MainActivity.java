@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity {
         EditText editText = (EditText) findViewById(R.id.editTextView);
         Log.i("Info","Button Pressed");
         Log.i("Values", editText.getText().toString());
-
     }
 
     @Override
