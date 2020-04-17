@@ -40,7 +40,7 @@
         android:layout_marginRight="236dp"
         android:layout_marginBottom="32dp"
         android:onClick="trocarImagem2"
-        android:text="Trocar Imgame"
+        android:text="Trocar Imagem"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
