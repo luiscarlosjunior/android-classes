@@ -26,12 +26,12 @@ public class MainActivity extends AppCompatActivity {
         //Toast.makeText(this, "Altura " + altura + "\n Largura: " + tamanho, Toast.LENGTH_LONG).show();
 
         //Translation
-        // bartView1.animate().translationXBy(1000).setDuration(2000);
+         //bartView1.animate().translationXBy(1000).setDuration(2000);
 
         // Rotation
         // bartView1.animate().rotation(1800).alpha(0).setDuration(1000);
 
-        // bartView1.animate().scaleX(0.5f).scaleY(0.5f).setDuration(1000);
+         bartView1.animate().scaleX(0.5f).scaleY(0.5f).setDuration(1000);
     }
 
     @Override
