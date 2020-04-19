@@ -19,8 +19,9 @@ public class MainActivity extends AppCompatActivity {
     // Função para realizar a validação
     public void verificarAcesso(View view) {
         // É criada a instância da classe EditText e atribuido valor;
-        EditText usuario = (EditText) findViewById(R.id.userText);
-        EditText senha = (EditText) findViewById(R.id.pwdText);
+
+        EditText usuario = findViewById(R.id.userText);
+        EditText senha =  findViewById(R.id.pwdText);
 
         // São declaradas duas variaveis do tipo String e são atribuidas os textos dos respectivos
         // campos de texto
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean verificarLogin(String usuario, String senha) {
+
         if (usuario.equals("admin") && senha.equals("1234")) {
             return true;
         }

@@ -1,0 +1,2 @@
+rootProject.name='Meu Login'
+include ':app'
