@@ -62,18 +62,19 @@
         android:id="@+id/button32"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button"
-        app:layout_constraintRight_toRightOf="@+id/button31"
-        app:layout_constraintLeft_toLeftOf="@+id/button31"
-        android:layout_marginBottom="224dp"
         android:layout_marginTop="225dp"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
+        android:layout_marginBottom="224dp"
+        android:text="@string/button"
         app:layout_constraintBottom_toBottomOf="@+id/button31"
-        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/button31"
+        app:layout_constraintRight_toRightOf="@+id/button31"
         app:layout_constraintTop_toTopOf="@+id/button3"
-        app:layout_constraintHorizontal_bias="0.0" />
+        app:layout_constraintVertical_bias="0.737"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
     <Button
         android:id="@+id/button33"
