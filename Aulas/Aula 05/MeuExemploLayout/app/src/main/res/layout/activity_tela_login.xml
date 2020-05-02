@@ -17,8 +17,11 @@
         android:hint="Digite seu RA"
         android:inputType="number"
         android:shadowColor="#DDD2D2"
-        android:textColor="#E6F3EE"
-        android:textColorHint="#B8B3B3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#D1E6D8"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#D1E6D8"
+        android:textColorLink="#D1E6D8"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
@@ -32,6 +35,7 @@
         android:layout_marginTop="60dp"
         android:ems="10"
         android:inputType="textPassword"
+        android:textColor="#D1E6D8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/campoRA" />
@@ -46,6 +50,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/campoSenha"
         app:layout_constraintVertical_bias="0.501">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75" />
 
         <Button
             android:id="@+id/button"
@@ -68,6 +77,21 @@
             android:layout_weight="1"
             android:background="#C8B7BD"
             android:text="Sair" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75" />
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="320dp"
+        android:layout_height="131dp"
+        app:layout_constraintBottom_toTopOf="@+id/campoRA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/uninove" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

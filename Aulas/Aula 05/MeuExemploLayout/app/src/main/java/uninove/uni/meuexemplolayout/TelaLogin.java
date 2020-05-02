@@ -40,7 +40,7 @@ public class TelaLogin extends AppCompatActivity {
 
     private boolean verificarLogin(String usuario, String senha) {
 
-        if (usuario.equals("admin") && senha.equals("1234")) {
+        if (usuario.equals("9999") && senha.equals("1234")) {
             return true;
         }
         else
