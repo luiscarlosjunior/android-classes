@@ -1,0 +1,4 @@
+#Thu May 07 14:25:46 BRT 2020
+base.0=C\:\\Users\\luisc\\Documents\\GitHub\\android_classes\\google\\location-samples-master\\Geofencing\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

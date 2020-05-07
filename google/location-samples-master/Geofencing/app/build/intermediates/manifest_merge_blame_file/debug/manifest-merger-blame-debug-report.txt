@@ -1,0 +1,123 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3Copyright 2014 Google, Inc.
+4
+5Licensed under the Apache License, Version 2.0 (the "License");
+6you may not use this file except in compliance with the License.
+7You may obtain a copy of the License at
+8
+9http://www.apache.org/licenses/LICENSE-2.0
+10
+11Unless required by applicable law or agreed to in writing, software
+12distributed under the License is distributed on an "AS IS" BASIS,
+13WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14See the License for the specific language governing permissions and
+15limitations under the License.
+16-->
+17<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+18    package="com.google.android.gms.location.sample.geofencing"
+19    android:versionCode="1"
+20    android:versionName="1.0" >
+21
+22    <uses-sdk
+23        android:minSdkVersion="16"
+23-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml
+24        android:targetSdkVersion="28" />
+24-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml
+25
+26    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+26-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:19:5-79
+26-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:19:22-76
+27    <uses-permission android:name="android.permission.WAKE_LOCK" />
+27-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:20:5-68
+27-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:20:22-65
+28    <!-- Include required permissions for Google Maps API to run. -->
+29    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+29-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\luisc\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
+29-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\luisc\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:23:22-76
+30    <uses-permission android:name="android.permission.INTERNET" />
+30-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\luisc\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:24:5-67
+30-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\luisc\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:24:22-64
+31
+32    <uses-feature
+32-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\luisc\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
+33        android:glEsVersion="0x00020000"
+33-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\luisc\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
+34        android:required="true" />
+34-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\luisc\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
+35
+36    <application
+36-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:22:5-50:19
+37        android:allowBackup="true"
+37-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:23:9-35
+38        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+38-->[androidx.core:core:1.1.0] C:\Users\luisc\.gradle\caches\transforms-2\files-2.1\7f6c41cc2a14c0fbaa8d0166c17dc544\core-1.1.0\AndroidManifest.xml:24:18-86
+39        android:debuggable="true"
+40        android:icon="@drawable/ic_launcher"
+40-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:24:9-45
+41        android:label="@string/app_name"
+41-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:25:9-41
+42        android:testOnly="true"
+43        android:theme="@style/Theme.Base" >
+43-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:26:9-42
+44        <meta-data
+44-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:27:9-29:69
+45            android:name="com.google.android.gms.version"
+45-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:28:13-58
+46            android:value="@integer/google_play_services_version" />
+46-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:29:13-66
+47
+48        <activity
+48-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:31:9-39:20
+49            android:name="com.google.android.gms.location.sample.geofencing.MainActivity"
+49-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:32:13-41
+50            android:label="@string/app_name" >
+50-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:33:13-45
+51            <intent-filter>
+51-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:34:13-38:29
+52                <action android:name="android.intent.action.MAIN" />
+52-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:35:17-69
+52-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:35:25-66
+53
+54                <category android:name="android.intent.category.LAUNCHER" />
+54-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:37:17-77
+54-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:37:27-74
+55            </intent-filter>
+56        </activity>
+57
+58        <receiver
+58-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:41:9-44:39
+59            android:name="com.google.android.gms.location.sample.geofencing.GeofenceBroadcastReceiver"
+59-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:42:13-54
+60            android:enabled="true"
+60-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:43:13-35
+61            android:exported="true" />
+61-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:44:13-36
+62
+63        <service
+63-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:46:9-49:72
+64            android:name="com.google.android.gms.location.sample.geofencing.GeofenceTransitionsJobIntentService"
+64-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:47:13-64
+65            android:exported="true"
+65-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:48:13-36
+66            android:permission="android.permission.BIND_JOB_SERVICE" />
+66-->C:\Users\luisc\Documents\GitHub\android_classes\google\location-samples-master\Geofencing\app\src\main\AndroidManifest.xml:49:13-69
+67        <!-- Needs to be explicitly declared on P+ -->
+68        <uses-library
+68-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\luisc\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+69            android:name="org.apache.http.legacy"
+69-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\luisc\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+70            android:required="false" />
+70-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\luisc\.gradle\caches\transforms-2\files-2.1\1b9026f860ab6935418a182675a0a44a\play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+71
+72        <activity
+72-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\luisc\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+73            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+73-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\luisc\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+74            android:exported="false"
+74-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\luisc\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+75            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+75-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\luisc\.gradle\caches\transforms-2\files-2.1\e91790921c910b5c0de2045e813ad59c\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+76    </application>
+77
+78</manifest>
