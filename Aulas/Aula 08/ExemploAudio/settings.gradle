@@ -1,0 +1,2 @@
+rootProject.name='Exemplo Audio'
+include ':app'

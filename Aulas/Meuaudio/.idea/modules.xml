@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Meu audio.iml" filepath="$PROJECT_DIR$/Meu audio.iml" group="Meu audio" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Meu audio/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Meuaudio.iml" filepath="$PROJECT_DIR$/.idea/modules/Meuaudio.iml" group="Meuaudio" />
     </modules>
   </component>
 </project>
