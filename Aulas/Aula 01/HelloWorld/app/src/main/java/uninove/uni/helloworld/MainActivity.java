@@ -3,17 +3,18 @@ package uninove.uni.helloworld;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     public void clickButton(View view) {
-
         // Instâncio e inicializo uma variável do tipo EditText
         EditText editText = (EditText) findViewById(R.id.editText);
 
@@ -34,5 +35,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button button = (Button) findViewById(R.id.btnClickMe);
+
+        button.setTextColor(Color.parseColor("#ff0000"));
+
     }
 }
