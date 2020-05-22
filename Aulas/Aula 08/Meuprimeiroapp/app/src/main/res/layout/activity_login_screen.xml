@@ -51,6 +51,9 @@
                 android:ems="10"
                 android:hint="@string/senha"
                 android:inputType="numberPassword"
+                android:shadowColor="#372727"
+                android:shadowDy="5"
+                android:shadowRadius="20"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textDirection="firstStrongRtl" />
         </LinearLayout>
@@ -90,6 +93,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="cancelar"
+            android:shadowColor="#322E2E"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="10"
             android:text="@string/cancelar" />
 
         <Space
