@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Exemplo Cadastro</string>
+    <string name="btn_incluir">Incluir usuário</string>
+    <string name="btn_consultar">Consultar usuários</string>
+    <string name="btn_cancelar">Cancelar</string>
+    <string name="btn_salvar">Salvar</string>
+    <string name="btn_excluir">Excluir</string>
+    <string name="hint_nome">Nome</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_senha">Senha</string>
+    <string name="btn_fechar">Fechar</string>
+    <string name="titulo_incluindo">Incluindo usuário</string>
+    <string name="titulo_editando">Editando usuário</string>
+    <string name="obrigatorio">Campo obrigatório</string>
+</resources>

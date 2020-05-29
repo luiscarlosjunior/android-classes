@@ -63,7 +63,6 @@ public class Usuario {
     /*
      *  Métodos - Comportamento
      * */
-
     public boolean isExcluir() {
         return excluir;
     }

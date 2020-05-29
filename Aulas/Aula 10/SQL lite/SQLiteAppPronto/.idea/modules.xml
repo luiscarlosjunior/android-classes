@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SQLiteAppExemplo - Copia.iml" filepath="$PROJECT_DIR$/SQLiteAppExemplo - Copia.iml" group="SQLiteAppExemplo - Copia" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="SQLiteAppExemplo - Copia/app" />
+      <module fileurl="file://$PROJECT_DIR$/SQLiteAppPronto.iml" filepath="$PROJECT_DIR$/SQLiteAppPronto.iml" group="SQLiteAppPronto" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="SQLiteAppPronto/app" />
     </modules>
   </component>
 </project>
