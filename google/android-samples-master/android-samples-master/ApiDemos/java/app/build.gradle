@@ -1,0 +1,95 @@
+import org.apache.tools.ant.filters.ConcatFilter
+
+apply plugin: 'com.android.application'
+apply plugin: 'project-report'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        applicationId "com.example.mapdemo"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        // Read the API key from ApiDemos/java/secure.properties into R.string.maps_api_key
+        def secureProps = new Properties()
+        if (file("../secure.properties").exists()) {
+            file("../secure.properties")?.withInputStream { secureProps.load(it) }
+        }
+        resValue "string", "maps_api_key", (secureProps.getProperty("MAPS_API_KEY") ?: "")
+
+        // To add your Maps API key to this project:
+        // 1. Create a file ApiDemos/java/secure.properties
+        // 2. Add this line, where YOUR_API_KEY is your API key:
+        //        MAPS_API_KEY=YOUR_API_KEY
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    flavorDimensions "version"
+    productFlavors {
+        gms {
+            dimension "version"
+            applicationIdSuffix ".gms"
+            versionNameSuffix "-gms"
+        }
+        v3 {
+            dimension "version"
+            applicationIdSuffix ".v3"
+            versionNameSuffix "-v3"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    // Needed for the LiteListDemo
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+
+    v3Implementation name:'maps-sdk-3.0.0-beta', ext:'aar'
+    v3Implementation 'com.google.android.gms:play-services-basement:17.3.0'
+    v3Implementation 'com.google.android.gms:play-services-base:17.3.0'
+    v3Implementation 'com.google.android.gms:play-services-gcm:17.0.0'
+    v3Implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+    // Tests
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
+
+task generateV3(type: Copy) {
+    group "V3 Beta"
+    description "Copies source code from GMS to V3 BETA."
+
+    from 'src/gms/java'
+    into 'src/v3/java'
+    filter { line ->
+        line.replace('com.google.android.gms.maps', 'com.google.android.libraries.maps')
+    }
+    filter(ConcatFilter, prepend: file('../../V3_FILE_HEADER'))
+}
+
+task generateV3Layout(type: Copy) {
+    group "V3 Beta"
+    description "Copies layout files from GMS to V3 BETA."
+
+    from 'src/gms/res/layout'
+    into 'src/v3/res/layout'
+    filter { line ->
+        line.replace('com.google.android.gms.maps', 'com.google.android.libraries.maps')
+    }
+}
