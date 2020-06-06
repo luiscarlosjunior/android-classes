@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Meu Mecanico</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="Nome_botao">Entrar</string>
+    <string name="btnentrar">Enter</string>
+
+</resources>
