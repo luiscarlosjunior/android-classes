@@ -62,10 +62,10 @@ public class ValidarEntrada extends AsyncTask {
             }
         } else{
             try{
-                String username = (String)arg0[0];
-                String password = (String)arg0[1];
+                String username = "lcarlos";//(String)arg0[0];
+                String password = "123";//(String)arg0[1];
 
-                String link="http://myphpmysqlweb.hostei.com/loginpost.php";
+                String link="http://192.168.56.1:8080/appmeulogin/login.php";
                 String data  = URLEncoder.encode("username", "UTF-8") + "=" +
                         URLEncoder.encode(username, "UTF-8");
                 data += "&" + URLEncoder.encode("password", "UTF-8") + "=" +
