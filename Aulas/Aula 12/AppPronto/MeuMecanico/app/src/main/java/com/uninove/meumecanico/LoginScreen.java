@@ -23,6 +23,10 @@ public class LoginScreen extends AppCompatActivity {
         EditText usuario = (EditText) findViewById(R.id.edtUsuario);
         EditText senha = (EditText) findViewById(R.id.edtSenha);
 
+        //ValidarEntrada vc = new ValidarEntrada(getBaseContext());
+
+        //vc.execute(usuario, senha);
+
         AsyncTask execute = new ValidarEntrada(this).execute(usuario, senha);
 
         // Declarar duas variáveis strings
