@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="servidor">http://192.168.56.1:8080/appmeulogin/</string>
+    <string name="login_page">login.php</string>
+    <string name="register_page">registro.php</string>
+
+</resources>

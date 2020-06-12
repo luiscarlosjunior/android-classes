@@ -70,7 +70,6 @@ public class ValidarEntrada extends AsyncTask <String, Void, String> {
                 String password = "123";//(String)arg0[1];
                 String link = "http://192.168.56.1:8080/appmeulogin/login.php?username="+username+"&password="+password;
 
-                URL url = new URL(link);
                 HttpClient client = new DefaultHttpClient();
                 HttpGet request = new HttpGet();
                 request.setURI(new URI(link));
