@@ -36,4 +36,10 @@ public class Autenticar {
             return false;
         }
     }
+
+
+    // Como o objeto está no momento - Situação
+    //Desconectado
+    //Conectado
+    //Sem senha
 }

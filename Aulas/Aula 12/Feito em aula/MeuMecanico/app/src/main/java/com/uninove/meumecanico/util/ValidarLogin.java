@@ -47,7 +47,7 @@ public class ValidarLogin extends AsyncTask <String, Void, String>{
     }
 
     @Override
-    protected String doInBackground(String... strings) {
+    protected String doInBackground(String[] strings) {
         // Utilizando o método GET
         if (porMetodo == 1) {
             try {

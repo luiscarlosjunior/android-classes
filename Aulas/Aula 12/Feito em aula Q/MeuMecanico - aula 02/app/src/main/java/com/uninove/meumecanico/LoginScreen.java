@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.uninove.meumecanico.util.Autenticar;
+import com.uninove.meumecanico.util.Inserir;
 import com.uninove.meumecanico.util.ValidarEntrada;
 
 public class LoginScreen extends AppCompatActivity {
@@ -35,21 +36,6 @@ public class LoginScreen extends AppCompatActivity {
 
         AsyncTask execute = new ValidarEntrada(this, 0).execute(user, pwd);
 
-        /*ValidarLogin vl = new ValidarLogin(this.getBaseContext());
-        vl.execute(user, pwd);*/
-        /*
-        Autenticar login = new Autenticar();
-
-        login.setUsuario(user);
-        login.setSenha(pwd);
-
-        if(login.permissao()) {
-            Intent intent = new Intent(this, MapsActivity.class);
-            startActivity(intent);
-        } else {
-            Toast.makeText(this, "Usuário ou senha são inválidos!",
-                    Toast.LENGTH_LONG).show();
-        }*/
     }
 
     // Botão cancelar

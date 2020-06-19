@@ -1,11 +1,12 @@
 package com.uninove.meumecanico.util;
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.app.ProgressDialog;
 import android.widget.Toast;
 
+import com.uninove.meumecanico.MaintenanceUser;
 import com.uninove.meumecanico.MapsActivity;
 
 import org.apache.http.HttpResponse;
@@ -21,11 +22,12 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 
-public class ValidarEntrada extends AsyncTask <String, Void, String>{
+
+public class ValidarEntrada extends AsyncTask <String, Void, String> {
     // Pegar o contexto do aplicativo
     private Context context;
     private int byGetOrPost = 0;
-    private ProgressDialog load;
+    private ProgressDialog carregando;
 
     public ValidarEntrada(Context context, int getorpost) {
         this.context = context;
@@ -34,8 +36,7 @@ public class ValidarEntrada extends AsyncTask <String, Void, String>{
 
     @Override
     protected void onPreExecute() {
-        load = ProgressDialog.show(this.context, "Por favor Aguarde ...",
-                "Baixando Imagem ...");
+        carregando = ProgressDialog.show(this.context, "Conectando...", "Aguarde um momento...");
     }
 
     @Override
@@ -62,7 +63,6 @@ public class ValidarEntrada extends AsyncTask <String, Void, String>{
                     sb.append(linha);
                     //break;
                 }
-
 
                 bf.close();
                 return sb.toString();
@@ -111,17 +111,16 @@ public class ValidarEntrada extends AsyncTask <String, Void, String>{
             }
         }
 
-
         return null;
     }
 
     @Override
     protected void onPostExecute(String s) {
-        load.dismiss();
-
-        Intent intent = new Intent(this.context, MapsActivity.class);
+        //super.onPostExecute(s);
+        carregando.dismiss();
+        //Toast.makeText(context, s, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this.context, MaintenanceUser.class);
         context.startActivity(intent);
-
-        //Toast.makeText(context, s, Toast.LENGTH_LONG).show();
     }
+
 }

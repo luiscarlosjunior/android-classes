@@ -1,10 +1,13 @@
 package com.uninove.meumecanico;
 
-import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.uninove.meumecanico.util.ValidarEntrada;
 
 public class LoginScreen extends AppCompatActivity {
 
@@ -17,16 +20,17 @@ public class LoginScreen extends AppCompatActivity {
     // Botão entrar
     public void verificar(View view) {
         // Pegar os dados digitados pelo usuário
-        //EditText usuario = (EditText) findViewById(R.id.edtUsuario);
-        //EditText senha = (EditText) findViewById(R.id.edtSenha);
+        EditText usuario = (EditText) findViewById(R.id.edtUsuario);
+        EditText senha = (EditText) findViewById(R.id.edtSenha);
 
-        //ValidarEntrada vc = new ValidarEntrada(this, true);
+        // Faz instância do objeto passando o contexto e o uso do método get ou post
+        ValidarEntrada validarEntrada = new ValidarEntrada(this, true);
 
-        //AsyncTask execute = vc.execute();
+        // Declara o tipo AsyncTask para executar o processo em background
+        AsyncTask execute = validarEntrada.execute(usuario.toString(), senha.toString());
 
         //Toast.makeText(this, vc.getNome(), Toast.LENGTH_LONG).show();
-
-        //AsyncTask execute = new ValidarEntrada(this, true).execute(usuario, senha);
+       // AsyncTask execute = new ValidarEntrada(this, true).execute();
 
         // Declarar duas variáveis strings
         //String user = usuario.getText().toString();
@@ -38,8 +42,8 @@ public class LoginScreen extends AppCompatActivity {
         //login.setSenha(pwd);
 
         //if(login.permissao()) {
-            Intent intent = new Intent(this, RegistrarUsuario.class);
-            startActivity(intent);
+            //Intent intent = new Intent(this, RegistrarUsuario.class);
+            //startActivity(intent);
         //} else {
             //Toast.makeText(this, "Usuário ou senha são inválidos!",
                     //.LENGTH_LONG).show();
