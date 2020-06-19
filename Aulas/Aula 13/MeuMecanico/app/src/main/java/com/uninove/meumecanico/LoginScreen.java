@@ -1,14 +1,13 @@
 package com.uninove.meumecanico;
 
-import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.uninove.meumecanico.util.Autenticar;
+import com.uninove.meumecanico.util.ValidarEntrada;
 
 public class LoginScreen extends AppCompatActivity {
 
@@ -28,17 +27,8 @@ public class LoginScreen extends AppCompatActivity {
         String user = usuario.getText().toString();
         String pwd  = senha.getText().toString();
 
-        Autenticar login = new Autenticar();
+        AsyncTask execute = new ValidarEntrada(this, true).execute(user, pwd);
 
-        login.setUsuario(user);
-        login.setSenha(pwd);
-
-        if(login.permissao()) {
-            Intent intent = new Intent(this, RegistrarUsuario.class);
-            startActivity(intent);
-        } else {
-            Toast.makeText(this, "Usuário ou senha são inválidos!", Toast.LENGTH_SHORT).show();
-        }
     }
 
     // Botão cancelar

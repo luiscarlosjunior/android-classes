@@ -16,44 +16,10 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 
-public class ValidarEntrada extends AsyncTask <String, Void, String> {
+public class ValidarEntrada extends AsyncTask {
 
-    @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
-    }
-
-    @Override
-    protected void onPostExecute(String s) {
-        setNome(s);
-        setValido(true);
-    }
-
-    //private TextView statusField,roleField;
     private Context context;
     private boolean byGetOrPost;
-    private boolean valido;
-    private String nome;
-
-    public boolean getValido() {
-        return valido;
-    }
-
-    private void setValido(boolean valido) {
-        this.valido = valido;
-    }
-
-    public String getNome() {
-        if (getValido()) {
-            return nome;
-        } else {
-            return null;
-        }
-    }
-
-    private void setNome (String nome) {
-        this.nome = nome;
-    }
 
     //flag 0 means get and 1 means post.(By default it is get.)
     public ValidarEntrada(Context context, boolean GetORPOST) {
@@ -62,11 +28,10 @@ public class ValidarEntrada extends AsyncTask <String, Void, String> {
     }
 
     @Override
-    protected String doInBackground(String[] arg0) {
+    protected Object doInBackground(Object[] objects) {
         if(byGetOrPost){ //means by Get Method
-
             try{
-                String username = "lsantos";//(String)arg0[0];
+                String username = "lcarlos";//(String)arg0[0];
                 String password = "123";//(String)arg0[1];
                 String link = "http://192.168.56.1:8080/appmeulogin/login.php?username="+username+"&password="+password;
 
@@ -83,11 +48,6 @@ public class ValidarEntrada extends AsyncTask <String, Void, String> {
                 while ((line = in.readLine()) != null) {
                     sb.append(line);
                     break;
-                }
-
-                if (sb.toString().length() > 0) {
-                    setValido(true);
-                    setNome(sb.toString());
                 }
 
                 in.close();
@@ -134,6 +94,4 @@ public class ValidarEntrada extends AsyncTask <String, Void, String> {
             }
         }
     }
-
-
 }

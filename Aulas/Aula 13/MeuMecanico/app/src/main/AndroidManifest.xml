@@ -16,6 +16,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="n">
+        <activity android:name=".Maintenance"></activity>
         <activity android:name=".RegistrarUsuario" />
 
         <meta-data

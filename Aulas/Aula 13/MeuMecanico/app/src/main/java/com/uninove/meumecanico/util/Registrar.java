@@ -12,7 +12,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URI;
 
-public class Registrar extends AsyncTask <String, Void, String> {
+public class Registrar extends AsyncTask {
     private Context context;
 
     public Registrar (Context context) {
@@ -20,24 +20,14 @@ public class Registrar extends AsyncTask <String, Void, String> {
     }
 
     @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
-    }
-
-    @Override
-    protected void onPostExecute(String s) {
-        super.onPostExecute(s);
-    }
-
-    @Override
-    protected String doInBackground(String[] strings) {
+    protected Object doInBackground(Object[] objects) {
         try{
 
             String name = "LuisCarlos";
             String username = "lcarlos";//(String)arg0[0];
             String password = "123";//(String)arg0[1];
 
-            String link = "http://192.168.56.1:8080/appmeulogin/registro.php?name="+name+"&username="+username+"&password="+password;
+            String link = "http://192.168.56.1:8080/meuapp/inserir.php?" +name+"&username="+username+"&password="+password;
 
             HttpClient client = new DefaultHttpClient();
             HttpGet request = new HttpGet();
@@ -51,7 +41,7 @@ public class Registrar extends AsyncTask <String, Void, String> {
 
             while ((line = in.readLine()) != null) {
                 sb.append(line);
-                break;
+                //break;
             }
 
             in.close();
