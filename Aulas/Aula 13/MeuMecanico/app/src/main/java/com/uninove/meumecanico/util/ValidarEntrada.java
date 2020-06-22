@@ -1,7 +1,11 @@
 package com.uninove.meumecanico.util;
 
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
+
+import com.uninove.meumecanico.Maintenance;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -16,10 +20,12 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 
-public class ValidarEntrada extends AsyncTask {
+public class ValidarEntrada extends AsyncTask <String, Void, String> {
 
     private Context context;
     private boolean byGetOrPost;
+    //Declarando
+    private ProgressDialog carregando;
 
     //flag 0 means get and 1 means post.(By default it is get.)
     public ValidarEntrada(Context context, boolean GetORPOST) {
@@ -27,12 +33,19 @@ public class ValidarEntrada extends AsyncTask {
         this.byGetOrPost = GetORPOST;
     }
 
+    // Executa antes da thread
     @Override
-    protected Object doInBackground(Object[] objects) {
+    protected void onPreExecute() {
+        carregando = ProgressDialog.show(this.context, "Conectando...",
+                "Aguarde um momento");
+    }
+
+    @Override
+    protected String doInBackground(String[] strings) {
         if(byGetOrPost){ //means by Get Method
             try{
-                String username = "lcarlos";//(String)arg0[0];
-                String password = "123";//(String)arg0[1];
+                String username = strings[0];
+                String password = strings[1];
                 String link = "http://192.168.56.1:8080/appmeulogin/login.php?username="+username+"&password="+password;
 
                 HttpClient client = new DefaultHttpClient();
@@ -93,5 +106,17 @@ public class ValidarEntrada extends AsyncTask {
                 return new String("Exception: " + e.getMessage());
             }
         }
+    }
+
+    // Executa depois que termina a thread - Retorna para a thread principal
+    @Override
+    protected void onPostExecute(String s) {
+        //super.onPostExecute(s);
+        carregando.dismiss();
+        //Toast.makeText(context, s, Toast.LENGTH_LONG).show();
+
+        // Ir para a outra tela
+        Intent intent = new Intent(this.context, Maintenance.class);
+        context.startActivity(intent);
     }
 }
